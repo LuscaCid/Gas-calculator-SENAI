@@ -5,7 +5,7 @@ export const FunctionsJS = function({
 
     }
     function translateToEnglish(){
-        HTMLelements.textLegend.innerHTML = `Travel calculator`
+        HTMLelements.textLegend.innerHTML = ` The Travel calculator`
         HTMLelements.textLabelDistance.innerHTML = `Travel distance: <span>(km)</span>`
         HTMLelements.inputDistance.placeholder = `Distance`
         HTMLelements.textHowMuchKm.innerHTML = `How much kilometers? <span>(km)</span>`
