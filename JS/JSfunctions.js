@@ -49,16 +49,26 @@ export const FunctionsJS = function({
             const numKMper = HTMLelements.inputHowMuchKM.value;
             const numPrice = HTMLelements.inputGasPrice.value;
             const result = (numDist/numKMper)*numPrice
-
+            
             /**variables calculates */
-            if (HTMLelements.isEng){
-                const txt = `O preço do combustivel para a viagem vai ser de ${result.toFixed(2)}`
-            } else { const txt = `the price of the travel i'll be ${result.toFixed(2)} bucks` }
-            console.log(txt)
-            HTMLelements.textInCardModal.querySelector('h1').innerHTML = txt
-            if(!HTMLelements.isEng){
+            if (!HTMLelements.isEng){
+                const txt = `O preço do combustivel para a viagem vai ser de R$${result.toFixed(2)}`
+                const h2 = `Pressione esc para fechar`
+                console.log(txt)
                 
-            } 
+                HTMLelements.textInCardModal.querySelector('h1').innerHTML = txt
+                HTMLelements.textInCardModal.querySelector('h2').innerHTML = h2
+
+            } else {
+                const txt = `the price of the travel i'll be ${result.toFixed(2)} bucks` 
+                console.log(txt)
+                const h2 = `press esc to close` 
+                HTMLelements.textInCardModal.querySelector('h1').innerHTML = txt
+                HTMLelements.textInCardModal.querySelector('h2').innerHTML = h2
+            
+            }
+            
+           
             document.querySelector('.card-modal').classList.remove('hide')
 
         } else {

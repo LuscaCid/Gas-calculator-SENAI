@@ -10,7 +10,7 @@ export function Elements (){
     const buttonCloseModal = document.querySelector('.close-card')
     const buttonTranslateEng = document.getElementById('eng')
     const buttonTranslatePt = document.getElementById('pt')
-    const textInCardModal = document.querySelector('.close-card')
+    const textInCardModal = document.querySelector('.card-results ')
     let isEng = false
     return { 
         isEng,
