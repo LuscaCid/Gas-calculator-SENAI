@@ -7,11 +7,12 @@ export function Elements (){
     const inputHowMuchKM = document.querySelector('#kml')
     const inputGasPrice = document.querySelector("#gas-price")
     const buttonCalculates = document.getElementById('calulates')
-
+    const buttonCloseModal = document.querySelector('.close-card')
     const buttonTranslateEng = document.getElementById('eng')
     const buttonTranslatePt = document.getElementById('pt')
 
     return { 
+        buttonCloseModal,
         textLegend,
         textLabelDistance,
         textHowMuchKm,

@@ -19,7 +19,7 @@ body::before{
     box-shadow: 0 1rem 2rem -1rem rgb(0,0,0,0.8);
 }
 body{
-    background: rgb(252, 214, 220);
+    background: rgb(166, 197, 255);
 }
 #application{
     height: 100vh;
@@ -58,6 +58,7 @@ form{
 
 }
 .input-wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
 }
@@ -91,10 +92,14 @@ input[type=number]::-webkit-inner-spin-button {
     
 }
 form button{
+    margin-top: 2rem;
     cursor: pointer;
-    padding: 1rem;
+    padding: 2rem;
+    color: white;
+    font-family: 'Poppins' ,sans-serif;
+    font-weight: 700;
     border: none;
-    background: rgb(252, 214, 220);
+    background: rgb(197, 215, 248);
     color: rgb(49, 48, 48);
     font-size: 2rem;
     border-radius: .4rem;
@@ -103,7 +108,7 @@ form button{
 }
 form button:hover{
     transform: translateY(-5px) ;
-    background: rgb(206, 165, 171);
+    background: rgb(159, 222, 252);
 }
 .buttons-translate{
     margin: 0 2rem;
@@ -163,14 +168,27 @@ form button:hover{
     position: absolute;
     inset: 0;
 }
+@keyframes opacity{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+.alert-no-data.close{
+    animation: opacity .4s ease-out ;
+}
 .alert-no-data{
+    border-radius: 0  0 .4rem .4rem;
+    transform: translatey(22px);
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
     background: rgb(245, 85, 85);
     font-size: 1.5rem;
     font-family: 'Poppins',sans-serif;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
 }

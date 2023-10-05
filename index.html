@@ -11,9 +11,7 @@
     <script src="./JS/main.js" type="module" defer></script>
 </head>
 <body>
-    <div class="alert-no-data hide">
-        <span>Insira dados nos campos para calular</span>
-    </div>
+    
     <div id="application">
         <div id="card">
             <form>
@@ -22,18 +20,29 @@
                     <div class="input-wrapper">
                         <label id="textDistance" for="travel-distance">Distância da viagem <span>(km)</span></label>
                         <input type="number" id="travel-distance" placeholder="Distância" required>
+                        <div class="alert-no-data hide ">
+                            <p>Insira dados no campo para calular</p>
+                        </div>
                     </div>
+                    
                 </fieldset>
                 <fieldset>
                     <div class="input-wrapper">
                         <label id="howMuchKm" for="kml">Quantos quilometros por litro? <span>(km)</span></label>
                         <input type="number" id="kml" required placeholder="KM/L">
+                        <div class="alert-no-data hide">
+                            <p>Insira dados no campo para calular</p>
+                        </div>
                     </div>
+                    
                 </fieldset>
                 <fieldset>
                     <div class="input-wrapper">
                         <label id="gasPriceText" for="gas-price">Preço da gasolina</label>
                         <input type="number" id="gas-price" placeholder="Preço" required>
+                        <div class="alert-no-data hide">
+                            <p>Insira dados no campo para calular</p>
+                        </div>
                     </div>    
                 </fieldset>
                 <button id="calulates">Calcular</button>
@@ -52,7 +61,7 @@
                 O preço da viagem vai custar 10 reais
             </h1>
             <h2>
-                o seu carro é considerado economico
+                Pressione esc para fechar
             </h2>
         </div>
     </div>
