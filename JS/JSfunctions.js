@@ -51,9 +51,14 @@ export const FunctionsJS = function({
             const result = (numDist/numKMper)*numPrice
 
             /**variables calculates */
-            const txt = `O preço do combustivel para a viagem vai ser de ${result.toFixed(2)}`
+            if (HTMLelements.isEng){
+                const txt = `O preço do combustivel para a viagem vai ser de ${result.toFixed(2)}`
+            } else { const txt = `the price of the travel i'll be ${result.toFixed(2)} bucks` }
             console.log(txt)
-            document.querySelector('.card-results h1').innerHTML = txt
+            HTMLelements.textInCardModal.querySelector('h1').innerHTML = txt
+            if(!HTMLelements.isEng){
+                
+            } 
             document.querySelector('.card-modal').classList.remove('hide')
 
         } else {
@@ -62,6 +67,7 @@ export const FunctionsJS = function({
         }
     }
     function translateToEnglish(){
+        HTMLelements.isEng = true;
         HTMLelements.textLegend.innerHTML = `The Travel calculator`;
         HTMLelements.textLabelDistance.innerHTML = `Travel distance: <span>(km)</span>`;
         HTMLelements.inputDistance.placeholder = `Distance`;
@@ -71,6 +77,7 @@ export const FunctionsJS = function({
         HTMLelements.buttonCalculates.innerHTML = `Calculates`;
     }
     function translateToPortuguese(){
+        HTMLelements.isEng = false
         HTMLelements.textLegend.innerHTML = `Calculadora de viagem`;
         HTMLelements.textLabelDistance.innerHTML = `Distância da viagem <span>(km)</span>`;
         HTMLelements.inputDistance.placeholder = `Distância`;
@@ -78,6 +85,8 @@ export const FunctionsJS = function({
         HTMLelements.textGasPrice.innerHTML = `Preço da gasolina`;
         HTMLelements.inputGasPrice.placeholder = `preço` ;
         HTMLelements.buttonCalculates.innerHTML = `Calcular`;
+        
+       
     }
     return {
         buttonCloseModalESC,

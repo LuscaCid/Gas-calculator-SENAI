@@ -10,8 +10,11 @@ export function Elements (){
     const buttonCloseModal = document.querySelector('.close-card')
     const buttonTranslateEng = document.getElementById('eng')
     const buttonTranslatePt = document.getElementById('pt')
-
+    const textInCardModal = document.querySelector('.close-card')
+    let isEng = false
     return { 
+        isEng,
+        textInCardModal,
         buttonCloseModal,
         textLegend,
         textLabelDistance,
